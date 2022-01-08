@@ -1,0 +1,63 @@
+<app-navigation></app-navigation>
+
+<div class="container">
+ 
+  <h2>Create a post</h2>
+  <h5>
+    By continuing, you agree to our
+    <button
+      class="text-button"
+      routerLink="/agreement"
+      routerLinkActive="active"
+    >
+      User Agreement
+    </button>
+    and
+    <button class="text-button" routerLink="/privacy" routerLinkActive="active">
+      Privacy Policy</button
+    >.
+  </h5>
+  <button
+    class="button-white"
+    title="image post"
+    *ngIf="!imagePost"
+    (click)="activateImagePost()"
+  >
+    Image
+  </button>
+  <button class="button-white" title="text post" *ngIf="imagePost" (click)="activateTextPost()">
+    Text
+  </button>
+  <button class="button-white" title="select file" *ngIf="imagePost" (click)="fileInput.click()">
+    File
+  </button>
+
+  <input
+    style="display: none"
+    type="file"
+    (change)="onFileChanged($event)"
+    #fileInput
+  />
+
+  <form
+    class="container-form"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)"
+    novalidate
+  >
+    <div><input type="text" placeholder="Title" formControlName="title" /></div>
+    <div><input type="text" placeholder="Text" formControlName="body" /></div>
+    <div *ngIf="imagePost">
+      <img
+        [src]="imageSrc"
+        *ngIf="imageSrc"
+        style="max-width: 140px; height: auto"
+      />
+    </div>
+
+    <button class="button-solo" [disabled]="!form.valid" type="submit">
+      SUBMIT
+    </button>
+  </form>
+
+</div>

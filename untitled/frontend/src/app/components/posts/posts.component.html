@@ -1,0 +1,19 @@
+<app-navigation></app-navigation>
+<span></span>
+<div class="body">
+  <div *ngFor="let post of posts$ | async">
+    <div class="post">
+      <div class="post-title">{{ post.title }}</div>
+      <div class="post-text">{{ post.body }}</div>
+      <div class="image"><img [src]="post.link.slice(15)" /></div>
+      <div *ngIf="post.user === userId" class="buttons">
+        <fa-icon
+          [ngStyle]="{ color: 'grey' }"
+          (click)="delete(post.id)"
+          class="icon"
+          [icon]="faBackspace"
+        ></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>

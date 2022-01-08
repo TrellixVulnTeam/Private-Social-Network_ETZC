@@ -1,0 +1,48 @@
+<app-navigation></app-navigation>
+
+<div class="container">
+
+  <h2>Login</h2>
+  <h5>
+    By continuing, you agree to our
+    <button
+      class="text-button"
+      routerLink="/agreement"
+      routerLinkActive="active"
+    >
+      User Agreement
+    </button>
+    and
+    <button class="text-button" routerLink="/privacy" routerLinkActive="active">
+      Privacy Policy</button
+    >.
+  </h5>
+  <form
+    class="container-form"
+    [formGroup]="loginForm"
+    (ngSubmit)="login()"
+    novalidate
+  >
+    <div>
+      <input formControlName="email" type="text" placeholder="Email" />
+    </div>
+    <div>
+      <input
+        formControlName="password"
+        type="password"
+        autocomplete="on"
+        placeholder="Password"
+      />
+    </div>
+
+    <div>
+      <button class="button-solo" type="submit">Log In</button>
+    </div>
+  </form>
+  <h5>
+    New to Private Social Network?
+    <button class="text-button" routerLink="/signup" routerLinkActive="active">
+      SIGN UP
+    </button>
+  </h5>
+</div>

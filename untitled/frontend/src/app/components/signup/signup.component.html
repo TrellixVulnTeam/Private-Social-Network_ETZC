@@ -1,0 +1,108 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <h2>Sign up</h2>
+  <h5>
+    By continuing, you agree to our
+    <button
+      class="text-button"
+      routerLink="/agreement"
+      routerLinkActive="active"
+    >
+      User Agreement
+    </button>
+    and
+    <button class="text-button" routerLink="/privacy" routerLinkActive="active">
+      Privacy Policy</button
+    >.
+  </h5>
+  <form
+    class="container-form"
+    [formGroup]="registrationForm"
+    (ngSubmit)="signup()"
+    novalidate
+  >
+    <div class="div-input">
+      <input
+        [class.invalid]="submitted && f.username.errors"
+        formControlName="username"
+        type="text"
+        placeholder="Username"
+        (focus)="notFocused = false"
+        (focusout)="notFocused = true"
+      />
+      <div class="text-danger" *ngIf="submitted && f.username.errors">
+        <small *ngIf="f.username.errors.required">*Username is required</small>
+        <small *ngIf="f.username.errors.minlength"
+          >*Username must be at least 6 characters</small
+        >
+        <small *ngIf="f.username.errors.maxlength"
+          >*Username must not exceed 12 characters</small
+        >
+      </div>
+    </div>
+
+    <div>
+      <input
+        [class.invalid]="submitted && f.email.errors"
+        formControlName="email"
+        type="email"
+        placeholder="Email"
+        (focus)="notFocused = false"
+        (focusout)="notFocused = true"
+      />
+      <div class="text-danger" *ngIf="submitted && f.email.errors">
+        <small *ngIf="f.email.errors.required">*Email is required</small>
+        <small *ngIf="f.email.errors.email">*Email is invalid</small>
+      </div>
+    </div>
+
+    <div>
+      <input
+        [class.invalid]="submitted && f.password.errors"
+        formControlName="password"
+        type="password"
+        autocomplete="on"
+        placeholder="Password"
+        (focus)="notFocused = false"
+        (focusout)="notFocused = true"
+      />
+      <div class="text-danger" *ngIf="submitted && f.password.errors">
+        <small *ngIf="f.password.errors.required">*Password is required</small>
+        <small *ngIf="f.password.errors.minlength"
+          >*Password must be at least 6 characters</small
+        >
+        <small *ngIf="f.password.errors.maxlength"
+          >*Password must not exceed 40 characters</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input
+        [class.invalid]="submitted && f.confirmPassword.errors"
+        type="password"
+        formControlName="confirmPassword"
+        class="form-control"
+        autocomplete="on"
+        placeholder="Confirm password"
+        (focus)="notFocused = false"
+        (focusout)="notFocused = true"
+      />
+      <div class="text-danger" *ngIf="submitted && f.confirmPassword.errors">
+        <small *ngIf="f.confirmPassword.errors.required"
+          >*Confirm your password
+        </small>
+        <small *ngIf="f.confirmPassword.errors.matching"
+          >*Password do not match</small
+        >
+      </div>
+    </div>
+    <button class="button-solo" type="submit">Continue</button>
+  </form>
+  <h5>
+    Already a user?
+    <button class="text-button" routerLink="/login" routerLinkActive="active">
+      LOG IN
+    </button>
+  </h5>
+</div>
