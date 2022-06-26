@@ -1,6 +1,6 @@
-html {
+/* html {
   font-family: Helvetica;
-  background-color: rgb(231, 231, 231);
+  
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 fa-icon:hover {
-  background-color: lightgray;
+  background-color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -268,3 +268,6 @@ button {
 small {
   display: block;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

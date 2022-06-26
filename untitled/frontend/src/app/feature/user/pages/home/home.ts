@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     template: `
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">PSN</a>
-        </nav>
+        <shared-navbar></shared-navbar>
+        <shared-sidebar></shared-sidebar>
         <user-posts></user-posts>`
 })
 

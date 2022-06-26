@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { App } from './app';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -24,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     // ReactiveFormsModule,
     // HttpClientModule,
 
-    UserModule, CoreModule, BrowserModule
+    UserModule, CoreModule, BrowserModule, BrowserAnimationsModule
   ],
   providers: [
 

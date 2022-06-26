@@ -8,6 +8,11 @@ export interface IPost {
 
 
 
-export interface IPostResponse{
-    results:IPost[];
+export interface IPostResponse {
+    results: [{     id: string;
+        title: string;
+        subtitle: string;
+        body: string;
+        image_url: any;}],
+    info: {}
     }

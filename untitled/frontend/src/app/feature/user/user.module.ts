@@ -6,7 +6,9 @@ import { Home } from './pages/home/home';
 
 import { Posts } from './pures/posts/posts';
 import { Post } from './pures/post/post';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 
 
@@ -25,7 +27,7 @@ const userRoutes: Routes = [
   imports: [
     RouterModule.forChild(userRoutes),
 
-    CommonModule
+    SharedModule, 
   ],
   exports: [
     RouterModule
