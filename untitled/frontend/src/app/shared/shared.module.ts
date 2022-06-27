@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
 
+
 import { Navbar } from './pures/navbar/navbar';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Sidebar } from './pures/sidebar/sidebar';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { Sidebar } from './pures/sidebar/sidebar';
 
 
 @NgModule({
     imports: [
-        CommonModule, FormsModule, ReactiveFormsModule,
+        CommonModule, 
 
         MatCardModule, MatButtonModule, MatSidenavModule
     ], 
     exports: [
-        CommonModule, FormsModule, 
+        CommonModule, 
 
-        MatCardModule, MatButtonModule,
+        MatCardModule, MatButtonModule, MatSidenavModule,
         
         Navbar, Sidebar]
         

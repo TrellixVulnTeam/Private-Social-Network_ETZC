@@ -8,6 +8,7 @@ import { PostService } from 'src/app/core/services/post.service';
     selector: 'user-posts',
     template: `
         <user-post [posts]="postResponse.results"></user-post>`
+        
  })
 
 export class Posts implements OnInit {

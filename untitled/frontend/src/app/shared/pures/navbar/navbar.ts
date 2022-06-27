@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'shared-navbar',
@@ -8,5 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class Navbar implements OnInit {
     constructor() { }
 
-    ngOnInit() { }
+    @Output() valueChange  = new EventEmitter();
+
+    ngOnInit() {}
+
+    public valueChanged(){
+            this.valueChange.emit('show')
+    }
 }

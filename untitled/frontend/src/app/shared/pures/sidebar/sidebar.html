@@ -1,16 +1,20 @@
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
+
+<!-- <div class="offcanvas offcanvas-top show" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"> -->
+<div 
+  [ngClass]="(show) ? {offcanvas} : {}"
+  class="bg-white fixed-bottom"
+  style="max-width: 250px; min-height: 100%; z-index: -1;"
   
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
-    </div>
-  
-  </mat-drawer-container>
+  tabindex="-1" id="offcanvasTop" 
+  aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+  </div>
+  <div class="offcanvas-body">
+    Home <br>
+    Posts <br>
+    Favorites <br>
+    Library <br>
+    
+    
+  </div>
+</div>

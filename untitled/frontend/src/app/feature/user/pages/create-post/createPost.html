@@ -1,0 +1,8 @@
+<h1>Create post works
+    <form [formGroup]="form">
+        <input type="text" placeholder="Title" formControlName="title">
+        <input type="text" placeholder="Subtitle" formControlName="subtitle">
+        <input type="text" placeholder="Body" formControlName="body">
+        <button type="button" (click)="onSubmit(form.value)" >Submit</button>
+    </form>
+</h1>
