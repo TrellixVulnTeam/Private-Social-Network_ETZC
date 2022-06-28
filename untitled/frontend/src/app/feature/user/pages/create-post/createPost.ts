@@ -9,11 +9,18 @@ export class CreatePostPage implements OnInit {
 
     form:FormGroup;
 
+    sidebar: boolean = true;
+  
     constructor() { }
 
     ngOnInit() {
         this.form = this.createFormGroup();
      }
+
+     displaySidebar(count){
+        this.sidebar = !this.sidebar
+     }
+ 
 
     createFormGroup(): FormGroup {
     return new FormGroup({

@@ -1,8 +1,34 @@
-<h1>Create post works
-    <form [formGroup]="form">
-        <input type="text" placeholder="Title" formControlName="title">
-        <input type="text" placeholder="Subtitle" formControlName="subtitle">
-        <input type="text" placeholder="Body" formControlName="body">
-        <button type="button" (click)="onSubmit(form.value)" >Submit</button>
-    </form>
-</h1>
+<shared-navbar (valueChange)="displaySidebar($event)"></shared-navbar>
+<shared-sidebar  [show]="sidebar"></shared-sidebar>
+<div class=" " style="padding-top: 66px">
+
+ 
+        <form style="max-width: 400px; "class=" card  mx-auto
+        " [formGroup]="form">
+        <h5 class="pt-5" >Create a Post</h5>
+        <div class="d-flex flex-column mx-auto
+         align-items-center car">
+            <mat-form-field class="pt-4" appearance="outline">
+            
+                <mat-label>Title</mat-label>
+                <input matInput class="pt-4" type="text" formControlName="title">
+    
+            </mat-form-field>
+            <mat-form-field  appearance="outline" >
+                <mat-label>Subtitle</mat-label>
+                <input matInput style="max-width: 200px; " type="text" formControlName="subtitle" class=" pt-1 ">
+    
+            </mat-form-field>
+         
+            <mat-form-field  appearance="outline">
+                <mat-label>Text</mat-label>
+                <textarea matInput   style="max-width: 200px; " type="text" formControlName="body" class="  pt-1"></textarea>
+    
+            </mat-form-field>
+                <button mat-flat-button color="accent" class=" my-3 " type="button" (click)="onSubmit(form.value)" >Submit</button>
+        </div>
+        
+        </form>
+
+</div>
+
