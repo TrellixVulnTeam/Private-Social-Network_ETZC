@@ -1,20 +1,28 @@
 
 <!-- <div class="offcanvas offcanvas-top show" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"> -->
 <div 
-  [ngClass]="(show) ? {offcanvas} : {}"
-  class="bg-white fixed-bottom"
-  style="max-width: 250px; min-height: 100%; z-index: -1;"
+  
+  data-bs-toggle="offcanvas" 
+  class="bg-white offcanvas offcanvas-top fixed-bottom show"
+  style="max-width: 250px; min-height: 100%;"
   
   tabindex="-1" id="offcanvasTop" 
   aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
   </div>
   <div class="offcanvas-body">
-    Home <br>
-    Posts <br>
-    Favorites <br>
-    Library <br>
-    
-    
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
         <shared-navbar (valueChange)="displaySidebar($event)"></shared-navbar>
         <shared-sidebar [show]="sidebar"></shared-sidebar> 
         <user-posts></user-posts>
+ 
        
         <!-- <button  class="btn btn-primary" (click)="toggleSidebar()"> SHOW</button> -->
 
@@ -17,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomePage implements OnInit {
 
-    sidebar: boolean = false
+    sidebar: boolean = true
     constructor() { }
 
     ngOnInit() { }

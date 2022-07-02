@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
+
 import { Navbar } from './pures/navbar/navbar';
 import { Sidebar } from './pures/sidebar/sidebar';
 
@@ -10,15 +11,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports: [
-        CommonModule, 
+        CommonModule, RouterModule,
 
-        MatCardModule, MatButtonModule, MatSidenavModule, MatInputModule,MatFormFieldModule, 
+        MatCardModule, MatButtonModule,  MatSidenavModule, MatInputModule,MatFormFieldModule, 
     ], 
     exports: [
-        CommonModule, 
+        CommonModule, RouterModule,
 
         MatCardModule, MatButtonModule, MatSidenavModule,MatButtonModule,MatInputModule,  MatFormFieldModule,
         
